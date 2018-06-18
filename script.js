@@ -63,7 +63,7 @@ function updateValues() {
             fineAmount += charges[chargeId]["fine_amount"] * $(this).val();
             jailTime += charges[chargeId]["jail_time"] * $(this).val();
             chargeText += charges[chargeId]["offense_name"];
-            if ($(":input")[i].val() > 1) {
+            if ($(this).val() > 1) {
                 chargeText += " (x"+$(this).val()+")";
             }
             chargeText += ", ";
