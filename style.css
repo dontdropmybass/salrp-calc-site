@@ -16,7 +16,7 @@ h1 {
 }
 
 #info {
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     width: 40%;
