@@ -16,6 +16,7 @@ $(function() {
                 $("#charge"+j).onhover(function() {
                     $("#description").html(charge["description"]);
                 });
+                console.log(charge);
             }
         }
         text += "</table>";
