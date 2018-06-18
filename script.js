@@ -4,6 +4,8 @@ $(function() {
 
     const table_header = "<tr><th>Offense</th><th>Fine</th><th>Jail Time</th></tr>";
     let text = $("#charges").html();
+    console.log(categories.length);
+    console.log(charges.length);
     for (i = 0; i < categories.length; i++) {
         text += "<h1>" + categories[i] + "</h1><br/>";
         text += "<table>" + table_header;
