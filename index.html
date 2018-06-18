@@ -14,9 +14,21 @@
 
         </div>
     </section>
-    <aside>
-        <p id="description"></p>
+    <aside id="totals" style="position: fixed;">
+        <table>
+            <tr>
+                <td>Maximum Fine:</td>
+                <td><p id="max-fine-amount"></p></td>
+                <td>Maximum Jail Time:</td>
+                <td><p id="max-jail-time"></p></td>
+                <td><button id='reset'><i class="fas fa-sync-all"></i></button></td>
+            </tr>
+        </table>
     </aside>
+    <div id="dialog" style="display:none;">
+        <h2>Charge Description:</h2>
+        <p id="description"></p>
+    </div>
 </div>
 <script src="script.js"></script>
 </body>
