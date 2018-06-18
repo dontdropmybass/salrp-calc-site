@@ -1,4 +1,5 @@
 $(function() {
+    console.log("start");
     let categories = $.getJSON("offense-categories.json");
     let charges = $.getJSON("offenses.json");
 
