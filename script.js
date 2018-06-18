@@ -19,7 +19,7 @@ $(function() {
     });
 
     $('#container').scroll(function() {
-        $(':aside').css('top', $(this).scrollTop());
+        $('#aside').css('top', $(this).scrollTop());
     });
 });
 
