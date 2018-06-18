@@ -4,21 +4,23 @@ const categories = ["Traffic Violations", "Criminal Traffic Violations", "Crimin
 let jailTime = 0;
 let fineAmount = 0;
 let chargeText = "";
+let charges = [];
 
 $(function() {
     $.ajax({
         dataType: "json",
         url: "offenses.json",
-        success: function(charges) {
-            printCharges(charges);
+        success: function(c) {
+            printCharges(c);
         },
         error: function(e) {
-            printCharges(e);
+            console.log(e);
         }
     });
 });
 
-function printCharges(charges) {
+function printCharges(c) {
+    charges = c;
     let text = $("#charges").html();
     for (i = 0; i < categories.length; i++) {
         text += "<h1>" + categories[i] + "</h1><br/>";
