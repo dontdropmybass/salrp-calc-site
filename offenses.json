@@ -96,4 +96,4 @@
     {"offense_name":"Flying low in major cities", "has_fine":true, "has_jail":false, "fine_amount":10000, "jail_time":0, "category":"Public Acts", "description":"Flying your aircraft below 200 meters in a major city."},
     {"offense_name":"Disturbing the peace", "has_fine":true, "has_jail":false, "fine_amount":500, "jail_time":0, "category":"Public Acts", "description":"Disturbing the peace is a crime generally defined as the unsettling of proper order in a public space through one's actions. This can include creating loud noise by fighting or challenging to fight, disturbing others by loud and unreasonable noise (including loud music), or using profanity."},
     {"offense_name":"Perjury", "has_fine":true, "has_jail":true, "fine_amount":10000, "jail_time":15, "category":"Public Acts", "description":"Providing false statement(s)/evidence after you have been sworn under oath in the presence of a judge or justice."}
-];
+]
