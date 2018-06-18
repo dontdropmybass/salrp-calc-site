@@ -21,11 +21,11 @@ function printCharges(charges) {
         for (j = 0; j < charges.length; j++) {
             if (charges[j]["category"]===categories[i]) {
                 charge = charges[j];
-                text += "<tr id='charge"+j+"''><td>" + charge[0] + "</td>";
-                text += "<td>" + charge[3] + "</td>";
-                text += "<td>" + charge[4] + "</td></tr>";
+                text += "<tr id='charge"+j+"''><td>" + charge["offense_name"] + "</td>";
+                text += "<td>" + charge["fine_amount"] + "</td>";
+                text += "<td>" + charge["jail_amount"] + "</td></tr>";
                 $("#charge"+j).on('hover', function() {
-                    $("#description").html(charge[5]);
+                    $("#description").html(charge["description"]);
                 });
                 console.log(charge);
             }
