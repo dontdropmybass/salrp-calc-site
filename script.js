@@ -16,8 +16,6 @@ $(function() {
             printCharges(e);
         }
     });
-
-    $("#reset").click(reset());
 });
 
 function printCharges(charges) {
@@ -39,7 +37,7 @@ function printCharges(charges) {
                     $("#dialog").dialog("open");
                     return false;
                 });
-                $("#charge-"+j+"-count").change(function() {
+                $("#charge-"+j+"-count").on("change paste keyup", function() {
                     updateValues();
                 });
                 console.log(charge);
