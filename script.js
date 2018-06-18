@@ -28,7 +28,7 @@ $(function() {
             }
             $("#charges").html(text);
         },
-        error: function(charge) {
+        error: function(charges) {
             const table_header = "<tr><th>Offense</th><th>Fine</th><th>Jail Time</th></tr>";
             let text = $("#charges").html();
             console.log(categories.length);
