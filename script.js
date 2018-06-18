@@ -30,7 +30,7 @@ function printCharges(charges) {
                 text += "<td><button id='charge"+j+"'><i class='fas fa-info-circle'></i></button></td>"
                 text += "<td>" + (charge["has_fine"]?charge["fine_amount"]:"N/A") + "</td>";
                 text += "<td>" + (charge["has_jail"]?charge["jail_time"]:"N/A") + "</td>";
-                text += "<td><label for='charge-"+j+"-count'>x</label><input id='charge-"+j+"-count' type='number' name='charge-"+j+"-count' value='0' min='0' max='10'/></td>"
+                text += "<td><label>x</label><input type='number' onchange='updateValues("+j+")' value='0' min='0' max='10'/></td>"
                 text += "</tr>";
                 $("#charge"+j).click(function() {
                     $("#description").html(charge["description"]);
@@ -40,7 +40,6 @@ function printCharges(charges) {
                 $("#charge-"+j+"-count").on("change paste keyup", function() {
                     updateValues();
                 });
-                console.log(charge);
             }
         }
         text += "</table>";
