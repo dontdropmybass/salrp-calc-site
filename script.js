@@ -45,6 +45,7 @@ function reset() {
     $(':input').val('0');
     $("#max-fine-amount").html("0");
     $("#max-jail-time").html("0");
+    $("#charge-text").html("");
 }
 
 function updateValues() {
