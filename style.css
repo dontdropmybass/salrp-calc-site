@@ -14,7 +14,6 @@ html, body {
 
 body {
     background-color: #2D3438;
-    padding: 80px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,5 +58,5 @@ tr {
 }
 
 tr::nth-child(odd) {
-    argb(0.2,255,255,255);
+    background-color: argb(0.2,255,255,255);
 }
