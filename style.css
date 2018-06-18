@@ -9,10 +9,18 @@ html, body {
     padding 0;
     height: 100%;
     width: 100%;
+    background-color: ##2D3438;
+    color: white;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
+    color: #cccccc;
+}
+
+.container {
+    margin: 80px;
+    background-color: #3C454A;
 }
 
 #info {
@@ -33,9 +41,19 @@ table {
 
 .subtitle-row {
     font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
+    font-size: 48pt;
+    color: #cccccc;
     text-align: center;
 }
 
 table, th, td {
     border: 1px solid black;
+}
+
+tr {
+    background-color: argb(0.1,255,255,255);
+}
+
+tr::nth-child(odd) {
+    argb(0.2,255,255,255);
 }
