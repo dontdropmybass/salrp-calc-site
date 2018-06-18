@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
 @font-face {
-  font-family: 'Pricedown Black';
-  src: url('pricedown bl.ttf');
+    font-family: 'Pricedown Black';
+    src: url('pricedown bl.ttf');
 }
 
 h1 {
-  font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
+    font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
+}
+
+aside {
+    position: fixed;
+    top: 20px;
+    border: 1px solid red;
+    float: left;
+    width: 40%;
+}
+
+section {
+    width: 60%;
+    float: left;
 }

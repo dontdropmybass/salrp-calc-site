@@ -1,4 +1,4 @@
-const table_header = "<tr><th>Offense</th><th>Fine</th><th>Jail Time</th><th>#</th></tr>";
+const table_header = "<tr><th>Offense</th><th>Info</th><th>Fine</th><th>Jail Time</th><th>#</th></tr>";
 const categories = ["Traffic Violations", "Criminal Traffic Violations", "Criminal Offenses", "Public Acts"];
 
 let jailTime = 0;
