@@ -30,7 +30,7 @@ function printCharges(charges) {
                 text += "<td><button id='charge"+j+"'><i class='fas fa-info-circle'></i></button></td>"
                 text += "<td>" + (charge["has_fine"]?charge["fine_amount"]:"N/A") + "</td>";
                 text += "<td>" + (charge["has_jail"]?charge["jail_time"]:"N/A") + "</td>";
-                text += "<td><label for='input-"+j+"'>x</label><input id='input-"+j+"' name='input-"+j+"' type='number' onchange='updateValues("+j+")' value='0' min='0' max='10'/></td>"
+                text += "<td><label for='input-"+j+"'>x</label><input id='input-"+j+"' name='input-"+j+"' type='number' onkeyup='updateValues()' onchange='updateValues()' value='0' min='0' max='10'/></td>"
                 text += "</tr>";
                 $("#charge"+j).click(function() {
                     $("#description").html(charge["description"]);
