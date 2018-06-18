@@ -72,7 +72,9 @@ function updateValues() {
 }
 
 function showDialog(id) {
-    $("#description").html(charges[id]["description"]);
-    $("#dialog").dialog("open");
-    return false;
+    $(document).ready(function() {
+        $("#description").html(charges[id]["description"]);
+        $("#dialog").dialog("open");
+        return false;
+    });
 }
