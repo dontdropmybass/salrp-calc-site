@@ -29,7 +29,7 @@ function printCharges(c) {
             if (charges[j]["category"]===categories[i]) {
                 charge = charges[j];
                 text += "<tr><td>" + charge["offense_name"] + "</td>";
-                text += "<td><button onclick='showDialog("+j+")''><i class='fas fa-info-circle'></i></button></td>"
+                text += "<td><button onclick='showDescription("+j+")''><i class='fas fa-info-circle'></i></button></td>"
                 text += "<td>" + (charge["has_fine"]?charge["fine_amount"]:"N/A") + "</td>";
                 text += "<td>" + (charge["has_jail"]?charge["jail_time"]:"N/A") + "</td>";
                 text += "<td><label for='input-"+j+"'>x</label><input id='input-"+j+"' name='input-"+j+"' type='number' onkeyup='updateValues()' onchange='updateValues()' value='0' min='0' max='10'/></td>"
@@ -71,10 +71,8 @@ function updateValues() {
     $("#charge-text").html(chargeText);
 }
 
-function showDialog(id) {
-    $(document).ready(function() {
-        $("#description").html(charges[id]["description"]);
-        $("#dialog").dialog("open");
-        return false;
-    });
+function showDescription(id) {
+    $("#description").html(charges[id]["description"]);
+    $("#dialog").fadeIn('slow');
+    return false;
 }

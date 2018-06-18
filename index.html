@@ -15,19 +15,21 @@
 
         </div>
     </section>
-    <aside id="totals">
-        <h2>Maximum Fine:</h2>
-        <p id="max-fine-amount">0</p>
-        <h2>Maximum Jail Time:</h2>
-        <p id="max-jail-time">0</p>
-        <h2>Full Charge Text:</h2>
-        <p id="charge-text"></p>
-        <button onclick='reset()' id='reset'><i class="fas fa-sync-alt"></i></button>
+    <aside>
+        <div id="totals">
+            <h2>Maximum Fine:</h2>
+            <p id="max-fine-amount">0</p>
+            <h2>Maximum Jail Time:</h2>
+            <p id="max-jail-time">0</p>
+            <h2>Full Charge Text:</h2>
+            <p id="charge-text"></p>
+            <button onclick='reset()' id='reset'><i class="fas fa-sync-alt"></i></button>
+        </div>
+        <div id="dialog" style="display:none;">
+            <h2>Charge Description:</h2>
+            <p id="description"></p>
+        </div>
     </aside>
-    <div id="dialog" style="display:none;">
-        <h2>Charge Description:</h2>
-        <p id="description"></p>
-    </div>
 </div>
 <script src="script.js"></script>
 </body>
