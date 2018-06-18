@@ -28,5 +28,8 @@ $(function() {
             }
             $("#charges").html(text);
         }
+        error: function(e) {
+            console.log(e);
+        }
     });
 });
