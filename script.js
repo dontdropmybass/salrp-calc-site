@@ -55,6 +55,7 @@ function reset() {
 }
 
 function updateValues() {
+    console.log("updating...");
     fineAmount = 0;
     jailTime = 0;
     chargeText = "";
