@@ -15,11 +15,11 @@ $(function() {
                 for (j = 0; j < charges.length; j++) {
                     if (charges[j]["category"]===categories[i]) {
                         charge = charges[j];
-                        text += "<tr id='charge"+j+"''><td>" + charge["offense"] + "</td>";
-                        text += "<td>" + charge["fine_amount"] + "</td>";
-                        text += "<td>" + charge["jail_time"] + "</td></tr>";
+                        text += "<tr id='charge"+j+"''><td>" + charge[0] + "</td>";
+                        text += "<td>" + charge[3] + "</td>";
+                        text += "<td>" + charge[4] + "</td></tr>";
                         $("#charge"+j).onhover(function() {
-                            $("#description").html(charge["description"]);
+                            $("#description").html(charge[5]);
                         });
                         console.log(charge);
                     }
@@ -39,11 +39,11 @@ $(function() {
                 for (j = 0; j < charges.length; j++) {
                     if (charges[j]["category"]===categories[i]) {
                         charge = charges[j];
-                        text += "<tr id='charge"+j+"''><td>" + charge["offense"] + "</td>";
-                        text += "<td>" + charge["fine_amount"] + "</td>";
-                        text += "<td>" + charge["jail_time"] + "</td></tr>";
+                        text += "<tr id='charge"+j+"''><td>" + charge[0] + "</td>";
+                        text += "<td>" + charge[3] + "</td>";
+                        text += "<td>" + charge[4] + "</td></tr>";
                         $("#charge"+j).onhover(function() {
-                            $("#description").html(charge["description"]);
+                            $("#description").html(charge[5]);
                         });
                         console.log(charge);
                     }
