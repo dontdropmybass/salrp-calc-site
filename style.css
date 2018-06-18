@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Open+Sans');
+@import url('skeleton.css');
+@import url('normalize.css');
+@font-face {
+  font-family: 'Pricedown Black';
+  src: url('pricedown bl.ttf');
+}
+
+h1 {
+  font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
+}
