@@ -1,6 +1,6 @@
 $(function() {
     console.log("start");
-    const categories = {"Traffic Violations", "Criminal Traffic Violations", "Criminal Offenses", "Public Acts"};
+    const categories = ["Traffic Violations", "Criminal Traffic Violations", "Criminal Offenses", "Public Acts"];
     $.ajax({
         dataType: "json",
         url: "offenses.json",
