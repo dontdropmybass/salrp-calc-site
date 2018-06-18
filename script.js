@@ -3,6 +3,7 @@ const categories = ["Traffic Violations", "Criminal Traffic Violations", "Crimin
 
 let jail-time = 0;
 let fine-amount = 0;
+let charge-text = "";
 
 $(function() {
     $.ajax({
@@ -58,13 +59,21 @@ function reset() {
 function updateValues() {
     fine-amount = 0;
     jail-time = 0;
+    charge-text = "";
     for (i = 0; i < $("input").length; i++) {
         if ($("input")[i].val() > 0) {
             charge-id = $("input")[i].attr('id').split("-")[1];
             fine-amount += charges[charge-id]["fine_amount"] * $("input")[i].val();
             jail-time += charges[charge-id]["jail_time"] * $("input")[i].val();
+            charge-text += charges[charge-id]["offense_name"];
+            if ($("input")[i].val() > 1) {
+                charge-text += " (x"+$("input")[i].val()+")";
+            }
+            charge-text += ", ";
         }
     }
+    charge-text = charge-text.slice(0, -2);
     $("#max-fine-amount").html(fine-amount);
     $("#max-jail-time").html(jail-time);
+    $("#charge-text").html(charge-text);
 }

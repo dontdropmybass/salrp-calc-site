@@ -9,22 +9,24 @@
 </head>
 <body>
 <div class="container">
+    <section id="totals" style="position: fixed;">
+        <table>
+            <tr>
+                <td>Maximum Fine:</td>
+                <td><p id="max-fine-amount">0</p></td>
+                <td>Maximum Jail Time:</td>
+                <td><p id="max-jail-time">0</p></td>
+                <td>Full Charge Text:</td>
+                <td><p id="charge-text"></p></td>
+                <td><button id='reset'><i class="fas fa-sync-alt"></i></button></td>
+            </tr>
+        </table>
+    </section>
     <section>
         <div id="charges">
 
         </div>
     </section>
-    <aside id="totals" style="position: fixed;">
-        <table>
-            <tr>
-                <td>Maximum Fine:</td>
-                <td><p id="max-fine-amount"></p></td>
-                <td>Maximum Jail Time:</td>
-                <td><p id="max-jail-time"></p></td>
-                <td><button id='reset'><i class="fas fa-sync-all"></i></button></td>
-            </tr>
-        </table>
-    </aside>
     <div id="dialog" style="display:none;">
         <h2>Charge Description:</h2>
         <p id="description"></p>
