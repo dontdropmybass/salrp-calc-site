@@ -55,18 +55,18 @@ function updateValues() {
     fineAmount = 0;
     jailTime = 0;
     chargeText = "";
-    for (i = 0; i < $(":input").length; i++) {
-        if ($(":input")[i].val() > 0) {
-            chargeId = $(":input")[i].attr('id').split("-")[1];
-            fineAmount += charges[chargeId]["fine_amount"] * $("input")[i].val();
-            jailTime += charges[chargeId]["jail_time"] * $("input")[i].val();
+    $(":input").each(function() {
+        if ($(this).val() > 0) {
+            chargeId = $(this).attr('id').split("-")[1];
+            fineAmount += charges[chargeId]["fine_amount"] * $(this).val();
+            jailTime += charges[chargeId]["jail_time"] * $(this).val();
             chargeText += charges[chargeId]["offense_name"];
             if ($(":input")[i].val() > 1) {
-                chargeText += " (x"+$("input")[i].val()+")";
+                chargeText += " (x"+$(this).val()+")";
             }
             chargeText += ", ";
         }
-    }
+    });
     chargeText = chargeText.slice(0, -2);
     $("#max-fine-amount").html(fineAmount);
     $("#max-jail-time").html(jailTime);
