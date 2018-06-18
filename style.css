@@ -26,3 +26,16 @@ h1 {
     width: 60%;
     float: left;
 }
+
+table {
+    border-collapse: collapse;
+}
+
+.subtitle-row {
+    font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+}

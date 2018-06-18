@@ -22,9 +22,10 @@ $(function() {
 function printCharges(c) {
     charges = c;
     let text = $("#charges").html();
+    text += "<table>";
     for (i = 0; i < categories.length; i++) {
-        text += "<h1>" + categories[i] + "</h1><br/>";
-        text += "<table>" + table_header;
+        text += "<tr class='subtitle-row'><td colspan='5'>" + categories[i] + "</td></tr>";
+        text += table_header;
         for (j = 0; j < charges.length; j++) {
             if (charges[j]["category"]===categories[i]) {
                 charge = charges[j];
@@ -36,8 +37,8 @@ function printCharges(c) {
                 text += "</tr>";
             }
         }
-        text += "</table>";
     }
+    text += "</table>";
     $("#charges").html(text);
 }
 
