@@ -1,9 +1,9 @@
 const table_header = "<tr><th>Offense</th><th>Fine</th><th>Jail Time</th><th>#</th></tr>";
 const categories = ["Traffic Violations", "Criminal Traffic Violations", "Criminal Offenses", "Public Acts"];
 
-let jail-time = 0;
-let fine-amount = 0;
-let charge-text = "";
+let jailTime = 0;
+let fineAmount = 0;
+let chargeText = "";
 
 $(function() {
     $.ajax({
@@ -57,23 +57,23 @@ function reset() {
 }
 
 function updateValues() {
-    fine-amount = 0;
-    jail-time = 0;
-    charge-text = "";
+    fineAmount = 0;
+    jailTime = 0;
+    chargeText = "";
     for (i = 0; i < $("input").length; i++) {
         if ($("input")[i].val() > 0) {
-            charge-id = $("input")[i].attr('id').split("-")[1];
-            fine-amount += charges[charge-id]["fine_amount"] * $("input")[i].val();
-            jail-time += charges[charge-id]["jail_time"] * $("input")[i].val();
-            charge-text += charges[charge-id]["offense_name"];
+            chargeId = $("input")[i].attr('id').split("-")[1];
+            fineAmount += charges[chargeId]["fine_amount"] * $("input")[i].val();
+            jailTime += charges[chargeId]["jail_time"] * $("input")[i].val();
+            chargeText += charges[chargeId]["offense_name"];
             if ($("input")[i].val() > 1) {
-                charge-text += " (x"+$("input")[i].val()+")";
+                chargeText += " (x"+$("input")[i].val()+")";
             }
-            charge-text += ", ";
+            chargeText += ", ";
         }
     }
-    charge-text = charge-text.slice(0, -2);
-    $("#max-fine-amount").html(fine-amount);
-    $("#max-jail-time").html(jail-time);
-    $("#charge-text").html(charge-text);
+    chargeText = chargeText.slice(0, -2);
+    $("#max-fine-amount").html(fineAmount);
+    $("#max-jail-time").html(jailTime);
+    $("#charge-text").html(chargeText);
 }
