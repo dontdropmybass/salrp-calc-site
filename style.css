@@ -4,18 +4,25 @@
     src: url('pricedown bl.ttf');
 }
 
+html, body {
+    margin: 0;
+    padding 0;
+    height: 100%;
+    width: 100%;
+}
+
 h1 {
     font-family: 'Pricedown Black', 'Impact', cursive, 'Comic Sans MS';
 }
 
-aside {
+#info {
     position: absolute;
     right: 0;
     top: 0;
     width: 40%;
 }
 
-section {
+#calculator {
     width: 60%;
     float: left;
 }
