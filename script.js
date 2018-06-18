@@ -17,10 +17,6 @@ $(function() {
             console.log(e);
         }
     });
-
-    $('#container').scroll(function() {
-        $('#aside').css('top', $(this).scrollTop());
-    });
 });
 
 function printCharges(c) {
