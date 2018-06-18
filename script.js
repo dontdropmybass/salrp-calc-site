@@ -23,7 +23,7 @@ function printCharges(charges) {
                 charge = charges[j];
                 text += "<tr id='charge"+j+"''><td>" + charge["offense_name"] + "</td>";
                 text += "<td>" + charge["fine_amount"] + "</td>";
-                text += "<td>" + charge["jail_amount"] + "</td></tr>";
+                text += "<td>" + charge["jail_time"] + "</td></tr>";
                 $("#charge"+j).on('hover', function() {
                     $("#description").html(charge["description"]);
                 });
