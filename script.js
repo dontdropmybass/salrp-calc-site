@@ -30,8 +30,8 @@ function printCharges(charges) {
                 charge = charges[j];
                 text += "<tr><td>" + charge["offense_name"] + "</td>";
                 text += "<td><button id='charge"+j+"'><i class='fas fa-info-circle'></i></button></td>"
-                text += "<td>" + charge["fine_amount"]?charge["fine_amount"]:"N/A" + "</td>";
-                text += "<td>" + charge["jail_time"]?charge["jail_time"]:"N/A" + "</td>";
+                text += "<td>" + (charge["has_fine"]?charge["fine_amount"]:"N/A") + "</td>";
+                text += "<td>" + (charge["has_jail"]?charge["jail_time"]:"N/A") + "</td>";
                 text += "<td><label for='charge-"+j+"-count'>x</label><input id='charge-"+j+"-count' type='number' name='charge-"+j+"-count' value='0' min='0' max='10'/></td>"
                 text += "</tr>";
                 $("#charge"+j).click(function() {
