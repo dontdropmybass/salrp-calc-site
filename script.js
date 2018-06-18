@@ -37,9 +37,6 @@ function printCharges(charges) {
                     $("#dialog").dialog("open");
                     return false;
                 });
-                $("#charge-"+j+"-count").on("change paste keyup", function() {
-                    updateValues();
-                });
             }
         }
         text += "</table>";
@@ -58,13 +55,13 @@ function updateValues() {
     fineAmount = 0;
     jailTime = 0;
     chargeText = "";
-    for (i = 0; i < $("input").length; i++) {
-        if ($("input")[i].val() > 0) {
-            chargeId = $("input")[i].attr('id').split("-")[1];
+    for (i = 0; i < $(":input").length; i++) {
+        if ($(":input")[i].val() > 0) {
+            chargeId = $(":input")[i].attr('id').split("-")[1];
             fineAmount += charges[chargeId]["fine_amount"] * $("input")[i].val();
             jailTime += charges[chargeId]["jail_time"] * $("input")[i].val();
             chargeText += charges[chargeId]["offense_name"];
-            if ($("input")[i].val() > 1) {
+            if ($(":input")[i].val() > 1) {
                 chargeText += " (x"+$("input")[i].val()+")";
             }
             chargeText += ", ";
